@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext  } from 'react';
 import './Profile.css';
 import SubmitContext  from './../Props/Props.jsx';
 
@@ -7,8 +7,6 @@ function Profile({ onProfileSubmit, DefaultLastName,  DefaultFirstName}) {
   const [lastName, setLastName] = useState(DefaultLastName);
   const [firstName, setFirstName] = useState(DefaultFirstName);
   const [formIsValid, setFormIsValid] = useState(Submit);
-
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
